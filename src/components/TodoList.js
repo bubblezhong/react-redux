@@ -2,7 +2,6 @@
  * Created by Administrator on 2017/2/10 0010.
  */
 import Todo from "./Todo";
-
 import React from 'react';
 //与逻辑无关，纯显示
 const TodoList = ({todos,onTodoClick}) => (
@@ -10,6 +9,7 @@ const TodoList = ({todos,onTodoClick}) => (
   <ul>
   {
     todos.map(todo =>
+
     <Todo key={todo.id}
           {...todo }                    //将整个todo对象里面的属性都传入；es6语法糖；
           onClick={() => onTodoClick(todo.id)}
